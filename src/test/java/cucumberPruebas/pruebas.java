@@ -1,4 +1,4 @@
-package cucumberPruebas;
+/*package cucumberPruebas;
 
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
@@ -17,4 +17,4 @@ public class pruebas {
   public void and() throws Throwable {
   }
 
-}
+}*/
