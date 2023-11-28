@@ -15,7 +15,7 @@ public class Dao {
 		ResultSet re;
 		String user ="";
 		int valido = 0;
-		String sql = "Select * from db.petsmile where nombreUsuario = ? and password = ?";
+		String sql = "Select * from petsmile where nombreUsuario = ? and password = ?";
 		try {
 			con = cn.getConnection();
 			ps =con.prepareStatement(sql);

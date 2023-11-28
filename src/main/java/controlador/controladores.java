@@ -54,7 +54,7 @@ public class controladores extends HttpServlet {
 		
 		msg = msg.toUpperCase();
 		RequestDispatcher despachador = request.getRequestDispatcher("/reservas.jsp");	
-		request.setAttribute("mensaje", msg);
+		request.setAttribute("reservas", msg);
 		despachador.forward(request, response);
 		
 		
