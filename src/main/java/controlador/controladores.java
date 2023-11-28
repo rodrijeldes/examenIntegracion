@@ -8,14 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Dao;
 
-
 /**
  * Servlet implementation class controladores
  */
-public class controladores extends HttpServlet{
-
+public class controladores extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -23,7 +21,8 @@ public class controladores extends HttpServlet{
         super();
         // TODO Auto-generated constructor stub
     }
-    /**
+
+	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,11 +35,11 @@ public class controladores extends HttpServlet{
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		
-        String usuario, password, msg="";
+		String usuario, password, msg="";
+		
 		usuario = request.getParameter("usuario");
-		password = request.getParameter("pasword");
+		password = request.getParameter("password");
 		
 		try {
 			if(Dao.validarDatos(usuario,password)>0) {
@@ -60,4 +59,5 @@ public class controladores extends HttpServlet{
 		
 		
 	}
+
 }

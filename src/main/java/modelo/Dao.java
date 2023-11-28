@@ -15,16 +15,15 @@ public class Dao {
 		ResultSet re;
 		String user ="";
 		int valido = 0;
-		String sql = "Select * from db.petsmile where nombreUsuario = ? and password ?";
+		String sql = "Select * from db.petsmile where nombreUsuario = ? and password = ?";
 		try {
-		
 			con = cn.getConnection();
 			ps =con.prepareStatement(sql);
 			ps.setString(1,nombreUsuario);
 			ps.setString(2,password);
 			re = ps.executeQuery();
 			while(re.next()) {
-				user = re.getString("admin");
+				user = re.getString("nombreUsuario");
 			}
 			if(user.equals("admin")) {
 				valido = 1;
